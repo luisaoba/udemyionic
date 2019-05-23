@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
+// Programa inicial é definido aqui. Aquele que tiver path = ''!!!
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', loadChildren: './intro/intro.module#IntroPageModule' },
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'feed', loadChildren: './feed/feed.module#FeedPageModule' }
 ];
 @NgModule({
   imports: [
