@@ -6,24 +6,24 @@
 
 <ion-content padding>
 
-  <ion-card>
+  <ion-card *ngFor="let filme of lista_filmes">
     <ion-item>
       <ion-avatar item-start>
         <img src="/assets/images/marty-avatar.png">
       </ion-avatar>
       <div style='padding-left:10px;'>
-      <ion-card-title class='feed_title'>{{ objeto_feed.titulo }}</ion-card-title>
-      <ion-card-subtitle class='feed_date'>{{ objeto_feed.data }}</ion-card-subtitle>
+      <ion-card-title class='feed_title'>{{ filme.original_title }}</ion-card-title>
+      <ion-card-subtitle class='feed_date'>{{ filme.release_date }}</ion-card-subtitle>
       </div>
     </ion-item>
 
     
 
 
-    <img src="/assets/images/advance-card-bttf.png">
+    <img [src]="'https://images.tmdb.org/t/p/w300' + filme.backdrop_path">
 
     <ion-card-content>
-      <p>{{ objeto_feed.descricao }}</p>
+      <p>{{ filme.overview }}</p>
     </ion-card-content>
 
     <ion-row>
@@ -47,4 +47,5 @@
     </ion-row>
 
   </ion-card>
+
 </ion-content>

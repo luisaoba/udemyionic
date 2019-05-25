@@ -17,15 +17,25 @@ export class FeedPage implements OnInit {
     time_comment: "11h ago teste"
   }
 
+  public lista_filmes = new Array<any>();
+
   public nome_usuario:string = "Charles Franca do Código";
 
   constructor(private moovie: MoovieService) { }
 
   ngOnInit() {
     //this.SomaDoisNumeros(10, 99);
-    this.moovie.getLatestMoovies().subscribe((response) => {
-      console.log(response);
-    });
+    this.moovie.getLatestMoovies().subscribe(
+      data=>{
+        const response = (data as any);
+        let pagina = JSON.parse(response.page);
+        
+        this.lista_filmes = (response.results as any);
+      },
+      error=>{
+        console.log(error);
+      }
+    );
   }
 
   public SomaDoisNumeros(num1:number, num2:number): void {
