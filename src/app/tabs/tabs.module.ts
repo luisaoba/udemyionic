@@ -47,7 +47,14 @@ const routes: Routes = [
             loadChildren: '../feed/feed.module#FeedPageModule'
           }
         ]
-      }]
+      },
+      {
+        // Pasta DEFAULT
+        path: '',
+        redirectTo: '/tabs/tab1',
+        pathMatch: 'full'
+      }    
+    ]
   }
 ];
 

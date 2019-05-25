@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
+
+
+// SEM USO!!! Nao vale nada aqui!
+// Este codigo está sem uso!!
+
 const routes: Routes = [
   {
     path: 'tabs',
