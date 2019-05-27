@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { IntroPage } from './intro.page';
 
+
+
 const routes: Routes = [
   {
     path: '',
