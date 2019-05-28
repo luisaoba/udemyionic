@@ -15,6 +15,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedPageModule } from './feed/feed.module';
 import { IntroPageModule } from './intro/intro.module';
+import { ConfiguracoesPageModule } from './configuracoes/configuracoes.module';
+import { SobrePageModule } from './sobre/sobre.module';
+import { PerfilPageModule } from './perfil/perfil.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +27,10 @@ import { IntroPageModule } from './intro/intro.module';
       AppRoutingModule,
       FeedPageModule,
       IntroPageModule,
-      HttpClientModule
+      HttpClientModule,
+      ConfiguracoesPageModule,
+      SobrePageModule,
+      PerfilPageModule
     ],
   providers: [
     StatusBar,
