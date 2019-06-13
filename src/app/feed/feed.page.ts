@@ -38,7 +38,7 @@ export class FeedPage implements OnInit {
   }
 
   loadData(event) {
-    console.log('estou em loadData');
+    console.log('estou em xxxloadData');
 
     this.page++;
     this.infiniteScroll = event.target;
