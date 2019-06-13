@@ -16,9 +16,15 @@ export class MoovieService {
 
   constructor(private http: HttpClient) { }
 
-  getLatestMoovies(){
+  getLatestMoovies(page = 1){
     // latest é o último filme
-    return this.http.get(this.baseAPIPath+"/movie/popular"+this.baseAPIKey);
+    return this.http.get(this.baseAPIPath+"/movie/popular"+this.baseAPIKey+"&page="+page);
   }
+
+  getMoovieDetails(filmeid){
+    console.log(this.baseAPIPath+"/movie/"+filmeid+this.baseAPIKey);
+    return this.http.get(this.baseAPIPath+"/movie/"+filmeid+this.baseAPIKey);
+  }
+
 
 }

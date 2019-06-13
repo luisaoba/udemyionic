@@ -5,6 +5,15 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
 
   <ion-card *ngFor="let filme of lista_filmes">
     <ion-item>
@@ -19,8 +28,8 @@
 
     
 
-
-    <img [src]="'https://images.tmdb.org/t/p/w300' + filme.backdrop_path">
+    <!-- https://images.tmdb.org/t/p/w300 -->
+    <img [src]="'https://image.tmdb.org/t/p/w500/' + filme.backdrop_path">
 
     <ion-card-content>
       <p>{{ filme.overview }}</p>
@@ -45,7 +54,22 @@
         </ion-note>
       </ion-col>
     </ion-row>
+    <ion-button href="/filme-detalhes/{{ filme.id }}">Detalhes</ion-button>
 
   </ion-card>
+
+
+  <ion-button (click)="toggleInfiniteScroll()" expand="block">
+    Toggle Infinite Scroll
+  </ion-button>
+
+  <ion-list></ion-list>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>

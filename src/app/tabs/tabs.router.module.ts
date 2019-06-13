@@ -3,10 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 
 
-
-// SEM USO!!! Nao vale nada aqui!
-// Este codigo está sem uso!!
-// Substituido por tabs.module.ts
+// Olhar esse codigo tambem: tabs.module.ts
 
 const routes: Routes = [
   {
@@ -23,7 +20,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'feed',
         children: [
           {
             path: '',
@@ -32,7 +29,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'configuracoes',
         children: [
           {
             path: '',
@@ -41,7 +38,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab4',
+        path: 'tab2',
         children: [
           {
             path: '',

@@ -22,7 +22,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'feed',
         children: [
           {
             path: '',
@@ -31,7 +31,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'configuracoes',
         children: [
           {
             path: '',
@@ -40,7 +40,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab4',
+        path: 'tab2',
         children: [
           {
             path: '',
