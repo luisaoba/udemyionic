@@ -18,7 +18,6 @@ import { IntroPageModule } from './intro/intro.module';
 import { ConfiguracoesPageModule } from './configuracoes/configuracoes.module';
 import { SobrePageModule } from './sobre/sobre.module';
 import { PerfilPageModule } from './perfil/perfil.module';
-import { FilmeDetalhesPageModule } from './filme-detalhes/filme-detalhes.module';
 
 @NgModule({
   declarations: [AppComponent],
