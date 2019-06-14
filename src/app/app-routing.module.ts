@@ -4,14 +4,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 // Programa inicial é definido aqui. Aquele que tiver path = ''!!!
 const routes: Routes = [
-  { path: '', loadChildren: './intro/intro.module#IntroPageModule' },
+  { path: 'intro', loadChildren: './intro/intro.module#IntroPageModule' },
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'feed', loadChildren: './feed/feed.module#FeedPageModule' },
   { path: 'configuracoes', loadChildren: './configuracoes/configuracoes.module#ConfiguracoesPageModule' },
   { path: 'sobre', loadChildren: './sobre/sobre.module#SobrePageModule' },
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
   { path: 'filme-detalhes/:myId', loadChildren: './filme-detalhes/filme-detalhes.module#FilmeDetalhesPageModule' },
-  { path: 'atletasPage', loadChildren: './atletas/atletas.module#AtletasPageModule' }
+  { path: '', loadChildren: './atletas/atletas.module#AtletasPageModule' }
 ];
 @NgModule({
   imports: [

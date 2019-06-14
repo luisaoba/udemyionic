@@ -5,5 +5,7 @@
 </ion-header>
 
 <ion-content>
-
+  <!-- a tag img só vai ser incluída SE a variável foto tiver conteúdo -->
+  <img *ngIf="foto" [src]="foto" alt="">
+  <ion-button (click)="tirarFoto()">Tirar Foto</ion-button>
 </ion-content>

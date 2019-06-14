@@ -18,6 +18,7 @@ import { IntroPageModule } from './intro/intro.module';
 import { ConfiguracoesPageModule } from './configuracoes/configuracoes.module';
 import { SobrePageModule } from './sobre/sobre.module';
 import { PerfilPageModule } from './perfil/perfil.module';
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,7 +36,8 @@ import { PerfilPageModule } from './perfil/perfil.module';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Camera
   ],
   bootstrap: [AppComponent]
 })
